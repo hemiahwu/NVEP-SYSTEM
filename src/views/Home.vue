@@ -1,8 +1,6 @@
 <template>
   <div class="home">
     <div class="card-container">
-      <!-- <card class="card" v-for="v in cardData" :key="v.id" :data="v"></card> -->
-
       <div class="card-wrapper" v-for="(data, i) in cardData">
         <img width="80" height="80" v-if="data.imgurl" :src="data.imgurl" />
 

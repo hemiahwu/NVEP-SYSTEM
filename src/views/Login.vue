@@ -10,7 +10,7 @@
         :formData="loginForm"
         :showUserGroup="false"
         :showResetBtn="false"
-        btnText="登录"
+        btnText="登录看看"
       />
     </section>
   </main>
@@ -19,8 +19,8 @@
 <script setup lang="ts">
 // props
 const loginForm = reactive({
-  account: "",
-  password: "",
+  account: "admin",
+  password: "123456",
 });
 </script>
 
