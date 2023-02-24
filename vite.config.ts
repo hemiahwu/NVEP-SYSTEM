@@ -10,6 +10,9 @@ import IconsResolver from "unplugin-icons/resolver";
 
 import { resolve } from "path";
 
+// 优化打包
+import { autoComplete, Plugin as importToCDN } from "vite-plugin-cdn-import";
+
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
@@ -27,7 +30,7 @@ export default defineConfig({
     AutoImport({
       imports: ["vue", "vue-router"],
       resolvers: [
-        ElementPlusResolver(),
+        // ElementPlusResolver(),
         // 自动导入图标组件
         IconsResolver({
           prefix: "Icon",
@@ -36,7 +39,7 @@ export default defineConfig({
     }),
     Components({
       resolvers: [
-        ElementPlusResolver(),
+        // ElementPlusResolver(),
         // 自动注册图标组件
         IconsResolver({
           enabledCollections: ["ep"],
@@ -45,6 +48,17 @@ export default defineConfig({
     }),
     Icons({
       autoInstall: true,
+    }),
+    importToCDN({
+      modules: [
+        autoComplete("vue"),
+        {
+          name: "element-plus",
+          var: "ELementPlus",
+          path: "https://cdn.bootcdn.net/ajax/libs/element-plus/2.2.31/index.full.min.js",
+          css: "https://cdn.bootcdn.net/ajax/libs/element-plus/2.2.31/index.min.css",
+        },
+      ],
     }),
   ],
   server: {
