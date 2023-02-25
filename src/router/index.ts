@@ -29,7 +29,6 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/home",
-
     component: Layout,
     children: [{ path: "", name: "home", component: Home }],
   },
@@ -40,7 +39,7 @@ const dynamicRoutes: Array<RouteRecordRaw> = [
   {
     path: "/order",
     component: Layout,
-    meta: { title: "订单管理" },
+    meta: { title: "订单管理", roles: ["super", "normal"] },
     children: [{ path: "", name: "order", component: Order }],
   },
 
