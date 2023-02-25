@@ -213,7 +213,7 @@
             <el-form-item label="店铺头像">
               <el-upload
                 class="avatar-uploader"
-                action="/api/goods/upload"
+                action="/backend/8013/api/goods/upload"
                 :show-file-list="false"
                 :on-success="handleAvatarSuccess"
               >

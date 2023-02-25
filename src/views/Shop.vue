@@ -37,7 +37,7 @@
           <el-form-item label="店铺头像">
             <el-upload
               class="avatar-uploader"
-              action="/api/shop/upload"
+              action="/backend/8013/api/shop/upload"
               :show-file-list="false"
               :on-success="handleAvatarSuccess"
               :before-upload="beforeAvatarUpload"
@@ -55,7 +55,7 @@
           <el-form-item label="店铺图片" style="width: 800px">
             <!-- 上传框 -->
             <el-upload
-              action="/api/shop/upload"
+              action="/backend/8013/api/shop/upload"
               list-type="picture-card"
               :on-success="handlePicSuccess"
               :on-preview="handlePictureCardPreview"

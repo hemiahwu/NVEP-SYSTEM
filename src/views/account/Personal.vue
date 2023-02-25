@@ -15,7 +15,7 @@
         <el-divider></el-divider>
         <el-upload
           class="avatar-uploader"
-          action="/api/users/avatar_upload"
+          action="/backend/8013/api/users/avatar_upload"
           :show-file-list="false"
           :on-success="uploadSuccess"
         >
