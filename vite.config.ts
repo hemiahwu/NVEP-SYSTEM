@@ -65,7 +65,7 @@ export default defineConfig({
     proxy: {
       // 带选项写法：http://localhost:5173/api/bar -> http://jsonplaceholder.typicode.com/bar
       "/api": {
-        target: "http://127.0.0.1:5005/",
+        target: "www.thenewstep.cn/backend/8013/api/",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
